@@ -1,0 +1,49 @@
+
+.container {
+    gap: 10px;
+}
+      body {
+        font-family: 'League Spartan', sans-serif;
+      }
+      
+      h1 {
+        color: hsl(280, 30%, 22%);
+        font-size: 3rem;
+        line-height: 0.9;
+      }
+      
+      .lead {
+        color:hsl(303, 10%, 53%);
+        line-height: 1.4;
+      }
+.boite { 
+    font-size: 16px;
+    background-color:hsl(300, 24%, 96%);
+    
+}
+.text{
+    color: hsl(333, 80%, 67%);
+}
+
+
+.testimony {
+    background-color: hsl(300, 43%, 22%);
+    
+}
+#irene {
+    margin-top: 2%;
+}
+#anne {
+    margin-top: 3%;
+}
+
+
+p {
+    color: white;
+    line-height: 1.2em;
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+
+

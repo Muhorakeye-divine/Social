@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container py-5">
+        <header>
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <a class="navbar-brand  bg-success fw-bold" href="/">Retour à l'accueil</a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="airlines-container">
+            <h2 class="mb-4 text-center bg-success-subtle">Caracteristiques de Singapore Airlines</h2>
+            
+            @if (airlines.length > 0) {
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered">
+                        <thead class="table-warning">
+                            <tr>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Pays</th>
+                                <th scope="col">Année de création</th>
+                                <th scope="col">Base</th>
+                                <th scope="col">IATA</th>
+                                <th scope="col">ICAO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @for (airline of airlines; track airline.iata) {
+                                <tr>
+                                    <td>{{ airline.name }}</td>
+                                    <td>
+                                        <span class=" ">{{ airline.country }}</span>
+                                    </td>
+                                    <td>{{ airline.year_created }}</td>
+                                    <td>{{ airline.base }}</td>
+                                    <td>
+                                        <span class=" ">{{ airline.iata }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="">{{ airline.icao }}</span>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            } 
+            @else {
+                @if (error) {
+                    <div class="alert alert-danger text-center" role="alert">
+                        {{ error }}
+                    </div>
+                } 
+            }
+        </div>
+    </div>
+
+    
+</body>
+</html>
