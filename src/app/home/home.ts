@@ -4,13 +4,14 @@ import { RouterLinkActive } from '@angular/router';
 
 
 @Component({
-  selector: 'app-page',
+  selector: 'app-home',
   standalone:true,
-  imports: [RouterLink],
+  imports: [RouterLink ,RouterLinkActive],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
 export class Home {
   
+
 
 }
