@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Apiairline } from './apiairline';
+import { Apiairline } from './apiairline.component';
 
 describe('Apiairline', () => {
   let component: Apiairline;

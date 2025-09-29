@@ -1,4 +1,4 @@
-import { Component ,OnInit} from '@angular/core';
+import { Component ,inject,OnInit} from '@angular/core';
 import { Airline } from '../models/airline';
 import { Serviceapi } from '../services/serviceapi';
 import { CommonModule } from '@angular/common';
@@ -9,15 +9,16 @@ import { RouterLinkActive } from '@angular/router';
   selector: 'app-apiairline',
   standalone:true,
   imports: [CommonModule,RouterLinkActive,RouterLink],
-  templateUrl: './apiairline.html',
-  styleUrl: './apiairline.css'
+  templateUrl: './apiairline.component.html',
+  styleUrl: './apiairline.component.css'
 })
 export class Apiairline implements OnInit {
   airlines:Airline[]=[];
   error: string | null = null;
   loading:boolean=false;
-
-  constructor(private airservice:Serviceapi){}
+  
+private airservice = inject (Serviceapi);
+  
   
   ngOnInit(): void {
     this. getAirlines();

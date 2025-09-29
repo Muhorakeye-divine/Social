@@ -13,7 +13,6 @@ import { routes } from '../app.routes';
 bootstrapApplication(App).catch((err)=>console.error(err));
 
 
-
 @NgModule({
   declarations: [],
   imports: [

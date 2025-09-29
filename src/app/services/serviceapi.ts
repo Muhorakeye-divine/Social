@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable,inject} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Airline } from '../models/airline';
@@ -8,7 +8,8 @@ import { Airline } from '../models/airline';
 })
 export class Serviceapi {
   private apiUrl ='https://api.api-ninjas.com/v1/airlines';
-  constructor(private http: HttpClient){}
+  private http = inject(HttpClient);
+
   getAirlines(name:string): Observable<Airline[]>{
     return this.http.get<Airline[]>(`${this.apiUrl}?name=${name}`);
   }
